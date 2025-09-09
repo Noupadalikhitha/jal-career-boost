@@ -145,9 +145,9 @@ const EventPoster = () => {
               {/* Speaker 1 */}
               <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/20 text-center shadow-inner backdrop-blur-sm group hover:scale-105 transition-all duration-300">
                 <div className="relative inline-block mb-6">
-                  <div className="w-32 h-32 mx-auto rounded-2xl overflow-hidden border-4 border-poster-accent shadow-glow group-hover:shadow-[0_0_40px_rgba(236,154,200,0.6)] transition-all duration-300">
+                  <div className="w-32 h-32 mx-auto rounded-2xl overflow-hidden border-4 border-poster-accent shadow-glow group-hover:shadow-[0_0_40px_rgba(34,197,94,0.6)] transition-all duration-300">
                     <img 
-                      src="/lovable-uploads/55d8cd3c-2104-4922-a4fe-a620a5761e71.png"
+                      src="/lovable-uploads/d2ac6665-1df9-4b56-89aa-6246ae4fb89c.png"
                       alt="Ram Pothamsetti"
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
@@ -157,16 +157,16 @@ const EventPoster = () => {
                   </div>
                 </div>
                 <h4 className="text-2xl font-serif font-bold text-white mb-2">Ram Pothamsetti</h4>
-                <p className="text-poster-accent font-semibold text-lg mb-2">Career Guidance Expert</p>
-                <p className="text-white/70 font-mono text-sm">Industry Veteran • Mentor</p>
+                <p className="text-poster-accent font-semibold text-lg mb-2">Software Engineer</p>
+                <p className="text-white/70 font-mono text-sm">Tech Professional • Mentor</p>
               </div>
 
               {/* Speaker 2 */}
               <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/20 text-center shadow-inner backdrop-blur-sm group hover:scale-105 transition-all duration-300">
                 <div className="relative inline-block mb-6">
-                  <div className="w-32 h-32 mx-auto rounded-2xl overflow-hidden border-4 border-poster-secondary shadow-glow group-hover:shadow-[0_0_40px_rgba(59,130,246,0.6)] transition-all duration-300">
+                  <div className="w-32 h-32 mx-auto rounded-2xl overflow-hidden border-4 border-poster-secondary shadow-glow group-hover:shadow-[0_0_40px_rgba(99,179,237,0.6)] transition-all duration-300">
                     <img 
-                      src="/src/assets/speaker-swapanth.jpg"
+                      src="/lovable-uploads/b1426715-73aa-4b2d-967b-a3f1dce34cd5.png"
                       alt="Swapanth Vakapalli"
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
@@ -176,7 +176,7 @@ const EventPoster = () => {
                   </div>
                 </div>
                 <h4 className="text-2xl font-serif font-bold text-white mb-2">Swapanth Vakapalli</h4>
-                <p className="text-poster-secondary font-semibold text-lg mb-2">Resume & ATS Specialist</p>
+                <p className="text-poster-secondary font-semibold text-lg mb-2">Software Engineer</p>
                 <p className="text-white/70 font-mono text-sm">Tech Professional • Coach</p>
               </div>
             </div>
