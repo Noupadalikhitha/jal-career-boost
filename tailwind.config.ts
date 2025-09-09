@@ -111,8 +111,28 @@ export default {
           "50%": { transform: "translateY(-10px)" }
         },
         "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 20px rgba(236, 154, 200, 0.4)" },
-          "50%": { boxShadow: "0 0 40px rgba(236, 154, 200, 0.8)" }
+          "0%, 100%": { boxShadow: "0 0 20px rgba(255, 107, 107, 0.4)" },
+          "50%": { boxShadow: "0 0 40px rgba(255, 107, 107, 0.8)" }
+        },
+        "wave": {
+          "0%": { transform: "translateX(-100%) translateY(0px)" },
+          "100%": { transform: "translateX(100vw) translateY(0px)" }
+        },
+        "wave-reverse": {
+          "0%": { transform: "translateX(100vw) translateY(-5px)" },
+          "100%": { transform: "translateX(-100%) translateY(-5px)" }
+        },
+        "float-fish": {
+          "0%, 100%": { transform: "translateY(0px) translateX(0px)" },
+          "25%": { transform: "translateY(-20px) translateX(10px)" },
+          "50%": { transform: "translateY(-10px) translateX(20px)" },
+          "75%": { transform: "translateY(-15px) translateX(5px)" }
+        },
+        "bubble-rise": {
+          "0%": { transform: "translateY(100vh) scale(0)", opacity: "0" },
+          "10%": { opacity: "1" },
+          "90%": { opacity: "1" },
+          "100%": { transform: "translateY(-100px) scale(1)", opacity: "0" }
         }
       },
       animation: {
@@ -123,6 +143,10 @@ export default {
         "slide-up": "slide-up 0.5s ease-out",
         "float": "float 3s ease-in-out infinite",
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+        "wave": "wave 20s linear infinite",
+        "wave-reverse": "wave-reverse 25s linear infinite",
+        "float-fish": "float-fish 6s ease-in-out infinite",
+        "bubble-rise": "bubble-rise 8s ease-in-out infinite",
       },
     },
   },

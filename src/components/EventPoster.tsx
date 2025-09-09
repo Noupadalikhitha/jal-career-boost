@@ -5,6 +5,25 @@ import { Calendar, Clock, Users, Trophy, Star, Sparkles, Award, Target } from "l
 const EventPoster = () => {
   return (
     <div className="min-h-screen bg-gradient-primary relative overflow-hidden flex items-center justify-center p-4">
+      {/* Ocean Wave Animations */}
+      <div className="absolute bottom-0 left-0 w-full h-32 opacity-20">
+        <div className="absolute bottom-0 left-0 w-[200%] h-8 bg-gradient-to-r from-poster-primary via-poster-secondary to-poster-accent rounded-full animate-wave" style={{ animationDelay: '0s' }}></div>
+        <div className="absolute bottom-4 left-0 w-[200%] h-6 bg-gradient-to-r from-poster-secondary via-poster-accent to-poster-primary rounded-full animate-wave-reverse" style={{ animationDelay: '-5s' }}></div>
+        <div className="absolute bottom-8 left-0 w-[200%] h-4 bg-gradient-to-r from-poster-accent via-poster-primary to-poster-secondary rounded-full animate-wave" style={{ animationDelay: '-10s' }}></div>
+      </div>
+      
+      {/* Floating Sea Elements */}
+      <div className="absolute top-20 right-20 text-4xl animate-float-fish" style={{ animationDelay: '0s' }}>🐠</div>
+      <div className="absolute top-40 left-16 text-3xl animate-float-fish" style={{ animationDelay: '2s' }}>🐟</div>
+      <div className="absolute bottom-40 right-32 text-5xl animate-float-fish" style={{ animationDelay: '4s' }}>🐋</div>
+      <div className="absolute top-60 right-16 text-2xl animate-float-fish" style={{ animationDelay: '1s' }}>🦈</div>
+      
+      {/* Rising Bubbles */}
+      <div className="absolute left-10 bottom-0 w-3 h-3 bg-white/30 rounded-full animate-bubble-rise" style={{ animationDelay: '0s' }}></div>
+      <div className="absolute left-20 bottom-0 w-2 h-2 bg-poster-accent/40 rounded-full animate-bubble-rise" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute right-32 bottom-0 w-4 h-4 bg-poster-primary/30 rounded-full animate-bubble-rise" style={{ animationDelay: '4s' }}></div>
+      <div className="absolute right-16 bottom-0 w-2 h-2 bg-white/40 rounded-full animate-bubble-rise" style={{ animationDelay: '6s' }}></div>
+      
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-glow opacity-30"></div>
       <div className="absolute top-10 left-10 w-32 h-32 bg-poster-primary/20 rounded-full blur-3xl animate-float"></div>
