@@ -1,194 +1,178 @@
 import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Calendar, Clock, Users, Trophy, Star, Sparkles, Award, Target } from "lucide-react";
+import { Calendar, Clock, Users, Trophy, Star, Award, Target, Gift } from "lucide-react";
+import React from "react";
+
+// Add CSS directly within the component for a single-file solution
+const MarioStyles = `
+  @keyframes run-across-screen {
+    from {
+      transform: translateX(-100px);
+    }
+    to {
+      transform: translateX(100vw);
+    }
+  }
+
+  .mario-container {
+    position: relative;
+    width: 100%;
+    height: 250px; /* Increased height of the container */
+    overflow: hidden;
+  }
+
+  .mario-runner {
+    /* Use a fixed height and let the width adjust to maintain aspect ratio */
+    height: 250px; /* Increased character size */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+    animation: run-across-screen 10s linear infinite;
+  }
+`;
 
 const EventPoster = () => {
   return (
-    <div className="min-h-screen bg-gradient-primary relative overflow-hidden flex items-center justify-center p-4">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-glow opacity-30"></div>
-      <div className="absolute top-10 left-10 w-32 h-32 bg-poster-primary/20 rounded-full blur-3xl animate-float"></div>
-      <div className="absolute bottom-20 right-20 w-40 h-40 bg-poster-secondary/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
-      <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-poster-accent/20 rounded-full blur-2xl animate-float" style={{ animationDelay: '2s' }}></div>
-      
-      <Card className="w-full max-w-5xl bg-gradient-card backdrop-blur-2xl border-white/30 shadow-elegant overflow-hidden relative z-10 animate-scale-in">
-        {/* Decorative Elements */}
-        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-poster-primary/20 to-transparent rounded-bl-full"></div>
-        <div className="absolute bottom-0 left-0 w-40 h-40 bg-gradient-to-tr from-poster-secondary/20 to-transparent rounded-tr-full"></div>
-        
+    <div className="min-h-screen bg-[#FFC567] relative overflow-hidden flex items-center justify-center p-6 font-sans">
+      {/* Inject the styles into the document head */}
+      <style>{MarioStyles}</style>
+
+      {/* Background with retro style shapes */}
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,#000_1px,transparent_1px),linear-gradient(#000_1px,transparent_1px)] bg-[length:40px_40px]"></div>
+
+      {/* Decorative Shapes */}
+      <div className="absolute top-12 left-8 w-36 h-36 bg-[#FB7DA8] rotate-12 border-4 border-black"></div>
+      <div className="absolute bottom-20 right-12 w-32 h-32 bg-[#FD5A46] rounded-full border-4 border-black"></div>
+      <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-[#552CB7] rotate-6 border-4 border-black"></div>
+      <div className="absolute bottom-28 left-1/4 w-20 h-20 bg-[#00995E] rounded-full border-4 border-black"></div>
+      <div className="absolute top-2/3 left-1/2 w-24 h-24 bg-[#058CD7] rotate-45 border-4 border-black"></div>
+
+      <Card className="w-full max-w-5xl bg-white border-4 border-black shadow-[10px_10px_0_#000] relative z-10 rounded-3xl overflow-hidden">
         {/* Header */}
-        <div className="relative bg-white/10 p-8 text-center border-b border-white/20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent"></div>
-          
-          <div className="relative z-10 animate-fade-in">
-            <div className="inline-flex items-center gap-2 mb-6">
-              <Sparkles className="w-5 h-5 text-poster-accent animate-pulse-glow" />
-              <Badge variant="secondary" className="bg-poster-accent/90 text-poster-dark font-bold text-sm px-6 py-2 shadow-glow font-mono tracking-wider">
-                JAL HOUSE EXCLUSIVE
-              </Badge>
-              <Sparkles className="w-5 h-5 text-poster-accent animate-pulse-glow" />
-            </div>
-            
-            <h1 className="text-5xl md:text-7xl font-serif font-bold text-transparent bg-gradient-text bg-clip-text mb-4 tracking-tight leading-tight">
-              Career Guidance
-            </h1>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4 tracking-wide">
-              Session
-            </h2>
-            <div className="flex items-center justify-center gap-3 text-xl text-white/90 font-medium">
-              <Target className="w-6 h-6 text-poster-primary" />
-              <span className="font-sans">Exclusively for 2nd Year Students</span>
-              <Target className="w-6 h-6 text-poster-primary" />
-            </div>
+        <div className="bg-[#FD5A46] text-center p-10 border-b-4 border-black">
+          <h1 className="text-5xl md:text-6xl font-extrabold text-black tracking-tight uppercase drop-shadow-[4px_4px_0_#fff]">
+            Career Guidance
+          </h1>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 drop-shadow-[3px_3px_0_#552CB7]">
+            Session
+          </h2>
+          <div className="mt-4 flex items-center justify-center gap-3 text-lg md:text-xl text-black font-bold">
+            <Target className="w-6 h-6" /> Exclusively for 2nd Year Students <Target className="w-6 h-6" />
           </div>
         </div>
 
         {/* Main Content */}
-        <div className="p-10 relative">
-          {/* Event Details Grid */}
-          <div className="grid lg:grid-cols-2 gap-12 mb-10">
-            {/* Left Column - Event Info */}
-            <div className="space-y-8 animate-slide-up">
-              {/* Date & Time */}
-              <div className="bg-white/5 rounded-2xl p-6 border border-white/20 shadow-inner backdrop-blur-sm">
-                <h3 className="text-2xl font-serif font-bold text-white mb-6 flex items-center gap-3">
-                  <Award className="w-6 h-6 text-poster-accent" />
-                  Event Details
-                </h3>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-4 text-white group hover:text-poster-primary transition-colors duration-300">
-                    <Calendar className="w-7 h-7 text-poster-accent group-hover:scale-110 transition-transform duration-300" />
-                    <div>
-                      <p className="text-lg font-semibold">Wednesday</p>
-                      <p className="text-sm text-white/70 font-mono">This Week</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center gap-4 text-white group hover:text-poster-primary transition-colors duration-300">
-                    <Clock className="w-7 h-7 text-poster-accent group-hover:scale-110 transition-transform duration-300" />
-                    <div>
-                      <p className="text-lg font-semibold">4:00 - 5:00 PM</p>
-                      <p className="text-sm text-white/70 font-mono">60 Minutes</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-4 text-white group hover:text-poster-primary transition-colors duration-300">
-                    <Users className="w-7 h-7 text-poster-accent group-hover:scale-110 transition-transform duration-300" />
-                    <div>
-                      <p className="text-lg font-semibold">2nd Year Students</p>
-                      <p className="text-sm text-white/70 font-mono">Limited Seats</p>
-                    </div>
-                  </div>
+        <div className="grid md:grid-cols-2 gap-10 p-10 bg-[#FFFDF5]">
+          {/* Left Column - Event Info */}
+          <div className="space-y-8">
+            <div className="bg-[#FB7DA8] border-4 border-black rounded-xl p-8">
+              <h3 className="text-2xl font-extrabold mb-4 flex items-center gap-2 text-black uppercase">
+                <Award className="w-6 h-6" /> Event Details
+              </h3>
+              <div className="space-y-4 text-black font-semibold">
+                <div className="flex items-center gap-3">
+                  <Calendar className="w-6 h-6" />
+                  <span>Wednesday • 10/09/2025</span>
                 </div>
-              </div>
-
-              {/* Agenda */}
-              <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/20 shadow-inner backdrop-blur-sm">
-                <h3 className="text-2xl font-serif font-bold text-white mb-6 flex items-center gap-3">
-                  <Trophy className="w-6 h-6 text-poster-accent" />
-                  Session Agenda
-                </h3>
-                <div className="space-y-4">
-                  {[
-                    { text: "Available Career Options", icon: "🎯" },
-                    { text: "Resume Building & Review", icon: "📄" },
-                    { text: "ATS Points Based Awards", icon: "🏆" },
-                    { text: "Interactive Q&A Session", icon: "💬" }
-                  ].map((item, index) => (
-                    <div 
-                      key={index}
-                      className="flex items-center gap-4 text-white/90 group hover:text-white transition-all duration-300 p-3 rounded-xl hover:bg-white/5"
-                      style={{ animationDelay: `${index * 0.1}s` }}
-                    >
-                      <div className="flex items-center justify-center w-10 h-10 bg-poster-accent/20 rounded-full text-lg group-hover:scale-110 transition-transform duration-300">
-                        {item.icon}
-                      </div>
-                      <span className="font-medium text-lg">{item.text}</span>
-                    </div>
-                  ))}
+                <div className="flex items-center gap-3">
+                  <Clock className="w-6 h-6" />
+                  <span>4:00 - 5:00 PM • 60 Minutes</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Users className="w-6 h-6" />
+                  <span>2nd Year Students • Limited Seats</span>
                 </div>
               </div>
             </div>
 
-            {/* Right Column - Speakers */}
-            <div className="space-y-8 animate-slide-up" style={{ animationDelay: '0.2s' }}>
-              <div className="text-center">
-                <h3 className="text-3xl font-serif font-bold text-white mb-2">
-                  Our Expert Speakers
-                </h3>
-                <div className="flex items-center justify-center gap-2">
-                  <Star className="w-5 h-5 text-poster-accent fill-poster-accent" />
-                  <p className="text-poster-primary font-medium">Industry Professionals</p>
-                  <Star className="w-5 h-5 text-poster-accent fill-poster-accent" />
-                </div>
-              </div>
-              
-              {/* Speaker 1 */}
-              <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/20 text-center shadow-inner backdrop-blur-sm group hover:scale-105 transition-all duration-300">
-                <div className="relative inline-block mb-6">
-                  <div className="w-32 h-32 mx-auto rounded-2xl overflow-hidden border-4 border-poster-accent shadow-glow group-hover:shadow-[0_0_40px_rgba(236,154,200,0.6)] transition-all duration-300">
-                    <img 
-                      src="/lovable-uploads/55d8cd3c-2104-4922-a4fe-a620a5761e71.png"
-                      alt="Ram Pothamsetti"
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-poster-accent rounded-full flex items-center justify-center shadow-lg">
-                    <Trophy className="w-4 h-4 text-poster-dark" />
-                  </div>
-                </div>
-                <h4 className="text-2xl font-serif font-bold text-white mb-2">Ram Pothamsetti</h4>
-                <p className="text-poster-accent font-semibold text-lg mb-2">Career Guidance Expert</p>
-                <p className="text-white/70 font-mono text-sm">Industry Veteran • Mentor</p>
-              </div>
+            <div className="bg-[#552CB7] border-4 border-black rounded-xl p-8 text-white">
+              <h3 className="text-2xl font-extrabold mb-4 flex items-center gap-2 uppercase">
+                <Trophy className="w-6 h-6" /> Session Agenda
+              </h3>
+              <ul className="space-y-3 font-semibold">
+                <li>🎯 Available Career Options</li>
+                <li>📄 Resume Building & Review</li>
+                <li>🏆 ATS Points Based Awards</li>
+                <li>💬 Interactive Q&A Session</li>
+              </ul>
+            </div>
 
-              {/* Speaker 2 */}
-              <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/20 text-center shadow-inner backdrop-blur-sm group hover:scale-105 transition-all duration-300">
-                <div className="relative inline-block mb-6">
-                  <div className="w-32 h-32 mx-auto rounded-2xl overflow-hidden border-4 border-poster-secondary shadow-glow group-hover:shadow-[0_0_40px_rgba(59,130,246,0.6)] transition-all duration-300">
-                    <img 
-                      src="/src/assets/speaker-swapanth.jpg"
-                      alt="Swapanth Vakapalli"
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-poster-secondary rounded-full flex items-center justify-center shadow-lg">
-                    <Star className="w-4 h-4 text-white fill-white" />
-                  </div>
-                </div>
-                <h4 className="text-2xl font-serif font-bold text-white mb-2">Swapanth Vakapalli</h4>
-                <p className="text-poster-secondary font-semibold text-lg mb-2">Resume & ATS Specialist</p>
-                <p className="text-white/70 font-mono text-sm">Tech Professional • Coach</p>
-              </div>
+            {/* New Box - What You'll Gain */}
+            <div className="bg-[#26CC00] border-4 border-black rounded-xl p-8 text-white">
+              <h3 className="text-2xl font-extrabold mb-4 flex items-center gap-2 uppercase">
+                <Gift className="w-6 h-6" /> What You'll Gain
+              </h3>
+              <ul className="space-y-3 font-semibold">
+                <li>✅ Clarity on career pathways</li>
+                <li>✅ Resume tips to stand out</li>
+              </ul>
             </div>
           </div>
 
-          {/* Call to Action */}
-          <div className="relative bg-gradient-to-r from-poster-primary via-poster-secondary to-poster-accent rounded-3xl p-8 text-center shadow-elegant overflow-hidden animate-fade-in">
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
-            <div className="relative z-10">
-              <h3 className="text-3xl font-serif font-bold text-white mb-3 flex items-center justify-center gap-3">
-                <Sparkles className="w-8 h-8 animate-pulse-glow" />
-                Don't Miss This Golden Opportunity!
-                <Sparkles className="w-8 h-8 animate-pulse-glow" />
+          {/* Right Column - Speakers */}
+          <div className="space-y-8">
+            <div className="text-center">
+              <h3 className="text-3xl font-extrabold text-black mb-3 uppercase drop-shadow-[3px_3px_0_#FFC567]">
+                Our Expert Speakers
               </h3>
-              <p className="text-white/95 text-xl font-medium mb-4">
-                Transform your career trajectory with expert guidance
-              </p>
-              <p className="text-white/80 font-mono text-sm">
-                Limited seats • Exclusive for JAL House 2nd Year students
-              </p>
+              <div className="flex items-center justify-center gap-2 text-[#FD5A46] font-extrabold">
+                <Star className="w-5 h-5 fill-current" /> Industry Professionals <Star className="w-5 h-5 fill-current" />
+              </div>
             </div>
+
+            {[{
+              name: "Ram Pothamsetti",
+              role: "Software Engineer",
+              desc: "Industry Veteran • Mentor",
+              img: "/lovable-uploads/5.png",
+              color: "bg-[#058CD7]"
+            }, {
+              name: "Swapanth Vakapalli",
+              role: "Software Engineer",
+              desc: "Tech Professional • Coach",
+              img: "/lovable-uploads/3.png",
+              color: "bg-[#00995E]"
+            }].map((speaker, i) => (
+              <div key={i} className={`border-4 border-black rounded-xl p-8 text-center ${speaker.color}`}>
+                <div className="w-28 h-28 mx-auto mb-4 overflow-hidden rounded-full border-4 border-black">
+                  <img src={speaker.img} alt={speaker.name} className="w-full h-full object-cover" />
+                </div>
+                <h4 className="text-2xl font-extrabold text-white drop-shadow-[2px_2px_0_#000]">{speaker.name}</h4>
+                <p className="text-white text-lg font-bold">{speaker.role}</p>
+                <p className="text-white/90 text-sm">{speaker.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
 
+        {/* Mario Runner - Placed at the bottom */}
+        <div className="mario-container">
+          <img
+            className="mario-runner"
+            src="/lovable-uploads/mario-running.gif"
+            alt="Mario running animation"
+          />
+        </div>
+
+        {/* Call to Action */}
+        <div className="bg-[#FD5A46] border-t-4 border-black text-center p-12">
+          <h3 className="text-3xl md:text-4xl font-extrabold text-black mb-3 uppercase drop-shadow-[4px_4px_0_#fff]">
+            Don't Miss This Golden Opportunity!
+          </h3>
+          <p className="text-white text-lg font-bold">
+            Transform your career trajectory with expert guidance
+          </p>
+          <p className="text-black text-sm font-extrabold mt-2">
+            Limited seats • Exclusive for JAL House 2nd Year students
+          </p>
+        </div>
+
         {/* Footer */}
-        <div className="bg-white/5 p-6 text-center border-t border-white/20 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent"></div>
-          <p className="text-white/90 font-semibold text-lg relative z-10 font-serif">
+        <div className="bg-[#552CB7] border-t-4 border-black text-center p-6">
+          <p className="text-white font-extrabold text-lg">
             JAL House Career Development Program
           </p>
-          <p className="text-white/60 font-mono text-sm mt-1">
+          <p className="text-[#FFC567] text-sm font-semibold">
             Building Tomorrow's Leaders Today
           </p>
         </div>
