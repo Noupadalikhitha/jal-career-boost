@@ -5,25 +5,6 @@ import { Calendar, Clock, Users, Trophy, Star, Sparkles, Award, Target } from "l
 const EventPoster = () => {
   return (
     <div className="min-h-screen bg-gradient-primary relative overflow-hidden flex items-center justify-center p-4">
-      {/* Ocean Wave Animations */}
-      <div className="absolute bottom-0 left-0 w-full h-32 opacity-20">
-        <div className="absolute bottom-0 left-0 w-[200%] h-8 bg-gradient-to-r from-poster-primary via-poster-secondary to-poster-accent rounded-full animate-wave" style={{ animationDelay: '0s' }}></div>
-        <div className="absolute bottom-4 left-0 w-[200%] h-6 bg-gradient-to-r from-poster-secondary via-poster-accent to-poster-primary rounded-full animate-wave-reverse" style={{ animationDelay: '-5s' }}></div>
-        <div className="absolute bottom-8 left-0 w-[200%] h-4 bg-gradient-to-r from-poster-accent via-poster-primary to-poster-secondary rounded-full animate-wave" style={{ animationDelay: '-10s' }}></div>
-      </div>
-      
-      {/* Floating Sea Elements */}
-      <div className="absolute top-20 right-20 text-4xl animate-float-fish" style={{ animationDelay: '0s' }}>🐠</div>
-      <div className="absolute top-40 left-16 text-3xl animate-float-fish" style={{ animationDelay: '2s' }}>🐟</div>
-      <div className="absolute bottom-40 right-32 text-5xl animate-float-fish" style={{ animationDelay: '4s' }}>🐋</div>
-      <div className="absolute top-60 right-16 text-2xl animate-float-fish" style={{ animationDelay: '1s' }}>🦈</div>
-      
-      {/* Rising Bubbles */}
-      <div className="absolute left-10 bottom-0 w-3 h-3 bg-white/30 rounded-full animate-bubble-rise" style={{ animationDelay: '0s' }}></div>
-      <div className="absolute left-20 bottom-0 w-2 h-2 bg-poster-accent/40 rounded-full animate-bubble-rise" style={{ animationDelay: '2s' }}></div>
-      <div className="absolute right-32 bottom-0 w-4 h-4 bg-poster-primary/30 rounded-full animate-bubble-rise" style={{ animationDelay: '4s' }}></div>
-      <div className="absolute right-16 bottom-0 w-2 h-2 bg-white/40 rounded-full animate-bubble-rise" style={{ animationDelay: '6s' }}></div>
-      
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-glow opacity-30"></div>
       <div className="absolute top-10 left-10 w-32 h-32 bg-poster-primary/20 rounded-full blur-3xl animate-float"></div>
@@ -145,9 +126,9 @@ const EventPoster = () => {
               {/* Speaker 1 */}
               <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/20 text-center shadow-inner backdrop-blur-sm group hover:scale-105 transition-all duration-300">
                 <div className="relative inline-block mb-6">
-                  <div className="w-32 h-32 mx-auto rounded-2xl overflow-hidden border-4 border-poster-accent shadow-glow group-hover:shadow-[0_0_40px_rgba(103,232,249,0.6)] transition-all duration-300">
+                  <div className="w-32 h-32 mx-auto rounded-2xl overflow-hidden border-4 border-poster-accent shadow-glow group-hover:shadow-[0_0_40px_rgba(236,154,200,0.6)] transition-all duration-300">
                     <img 
-                      src="/lovable-uploads/b1426715-73aa-4b2d-967b-a3f1dce34cd5.png"
+                      src="/lovable-uploads/55d8cd3c-2104-4922-a4fe-a620a5761e71.png"
                       alt="Ram Pothamsetti"
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
@@ -157,16 +138,16 @@ const EventPoster = () => {
                   </div>
                 </div>
                 <h4 className="text-2xl font-serif font-bold text-white mb-2">Ram Pothamsetti</h4>
-                <p className="text-poster-accent font-semibold text-lg mb-2">Software Engineer</p>
-                <p className="text-white/70 font-mono text-sm">Tech Professional • Mentor</p>
+                <p className="text-poster-accent font-semibold text-lg mb-2">Career Guidance Expert</p>
+                <p className="text-white/70 font-mono text-sm">Industry Veteran • Mentor</p>
               </div>
 
               {/* Speaker 2 */}
               <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/20 text-center shadow-inner backdrop-blur-sm group hover:scale-105 transition-all duration-300">
                 <div className="relative inline-block mb-6">
-                  <div className="w-32 h-32 mx-auto rounded-2xl overflow-hidden border-4 border-poster-secondary shadow-glow group-hover:shadow-[0_0_40px_rgba(56,178,172,0.6)] transition-all duration-300">
+                  <div className="w-32 h-32 mx-auto rounded-2xl overflow-hidden border-4 border-poster-secondary shadow-glow group-hover:shadow-[0_0_40px_rgba(59,130,246,0.6)] transition-all duration-300">
                     <img 
-                      src="/lovable-uploads/d2ac6665-1df9-4b56-89aa-6246ae4fb89c.png"
+                      src="/src/assets/speaker-swapanth.jpg"
                       alt="Swapanth Vakapalli"
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
@@ -176,7 +157,7 @@ const EventPoster = () => {
                   </div>
                 </div>
                 <h4 className="text-2xl font-serif font-bold text-white mb-2">Swapanth Vakapalli</h4>
-                <p className="text-poster-secondary font-semibold text-lg mb-2">Software Engineer</p>
+                <p className="text-poster-secondary font-semibold text-lg mb-2">Resume & ATS Specialist</p>
                 <p className="text-white/70 font-mono text-sm">Tech Professional • Coach</p>
               </div>
             </div>
