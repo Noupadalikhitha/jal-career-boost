@@ -37,13 +37,13 @@ All colors MUST be HSL.
     --ring: 142 76% 36%;
 
     /* Event poster specific colors */
-    --poster-primary: 236 72% 79%;
-    --poster-secondary: 217 91% 60%;
-    --poster-accent: 45 93% 47%;
-    --poster-dark: 230 35% 7%;
-    --poster-gradient-start: 236 72% 79%;
-    --poster-gradient-middle: 217 91% 60%;
-    --poster-gradient-end: 280 100% 70%;
+    --poster-primary: 160 84% 39%;
+    --poster-secondary: 172 100% 41%;
+    --poster-accent: 184 100% 60%;
+    --poster-dark: 210 40% 8%;
+    --poster-gradient-start: 160 84% 39%;
+    --poster-gradient-middle: 172 100% 41%;
+    --poster-gradient-end: 184 100% 60%;
     
     /* Premium gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--poster-gradient-start)), hsl(var(--poster-gradient-middle)), hsl(var(--poster-gradient-end)));
