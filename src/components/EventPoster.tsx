@@ -145,7 +145,7 @@ const EventPoster = () => {
               {/* Speaker 1 */}
               <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/20 text-center shadow-inner backdrop-blur-sm group hover:scale-105 transition-all duration-300">
                 <div className="relative inline-block mb-6">
-                  <div className="w-32 h-32 mx-auto rounded-2xl overflow-hidden border-4 border-poster-accent shadow-glow group-hover:shadow-[0_0_40px_rgba(142,76,36,0.6)] transition-all duration-300">
+                  <div className="w-32 h-32 mx-auto rounded-2xl overflow-hidden border-4 border-poster-accent shadow-glow group-hover:shadow-[0_0_40px_rgba(103,232,249,0.6)] transition-all duration-300">
                     <img 
                       src="/lovable-uploads/b1426715-73aa-4b2d-967b-a3f1dce34cd5.png"
                       alt="Ram Pothamsetti"
@@ -164,7 +164,7 @@ const EventPoster = () => {
               {/* Speaker 2 */}
               <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/20 text-center shadow-inner backdrop-blur-sm group hover:scale-105 transition-all duration-300">
                 <div className="relative inline-block mb-6">
-                  <div className="w-32 h-32 mx-auto rounded-2xl overflow-hidden border-4 border-poster-secondary shadow-glow group-hover:shadow-[0_0_40px_rgba(199,89,48,0.6)] transition-all duration-300">
+                  <div className="w-32 h-32 mx-auto rounded-2xl overflow-hidden border-4 border-poster-secondary shadow-glow group-hover:shadow-[0_0_40px_rgba(56,178,172,0.6)] transition-all duration-300">
                     <img 
                       src="/lovable-uploads/d2ac6665-1df9-4b56-89aa-6246ae4fb89c.png"
                       alt="Swapanth Vakapalli"
